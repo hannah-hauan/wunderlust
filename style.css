@@ -1,6 +1,6 @@
 .skip-link {
-    background:#161616;
-    color: #00bfd8;
+    background:#00bfd8;
+    color: #161616;
     font-weight: 700; 
     left: 50%;
     padding: 8px;
@@ -12,13 +12,13 @@
 }
 
 .skip-link a {
-    color: #161616;
+    color: #00bfd8;
   }
   
   .skip-link:focus {
     transform: translateY(0%);
-    outline: solid 2px #00bfd8;    
-    color: #161616;
+    outline: solid 2px #161616;    
+    color: #00bfd8;
   }
   
   .skip-link:focus-within {
