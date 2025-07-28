@@ -5,23 +5,23 @@
     left: 50%;
     padding: 8px;
     border-radius: 3px;
-    outline: solid 2px #1c0a3c;    
+    outline: solid 2px #00bfd8;    
     position: absolute;
     transform: translateY(-170%);
     transition: transform 0.3s;
 }
 
 .skip-link a {
-    color: #bf9ef9;
+    color: #161616;
   }
   
   .skip-link:focus {
     transform: translateY(0%);
-    outline: solid 2px #1c0a3c;    
-    color: #bf9ef9;
+    outline: solid 2px #00bfd8;    
+    color: #161616;
   }
   
   .skip-link:focus-within {
      transform: translateY(0%);
-     color: #bf9ef9;
+     color: #161616;
   }
