@@ -244,19 +244,27 @@
 
         <h2>Contact Us</h2>
         <form>
-           <label for="firstName">First Name:</label>
+           <label for="firstName">First Name*</label>
            <input type="text" id="firstName" name="firstName" placeholder="Enter first name" required> 
        
-           <label for="lastName">Last Name:</label>
+           <label for="lastName">Last Name*</label>
            <input type="text" id="lastName" name="lastName" placeholder="Enter last name" required>
        
-           <label for="email">Email:</label>
-           <input type="email" id="email" name="email" placeholder="Enter email" required>
+           <fieldset>
+               <legend>Preferred Contact Method*</legend>
+               <input type="radio" id="phoneContact" name="contactMethod" value="phone" required>
+               <label for="phoneContact">Phone</label>
+               <input type="radio" id="emailContact" name="contactMethod" value="email">
+               <label for="emailContact">Email</label>
+            </fieldset>
+          
+           <label for="email">Email</label>
+           <input type="email" id="email" name="email" placeholder="Enter email">
        
-           <label for="phone">Phone:</label>
+           <label for="phone">Phone</label>
            <input type="tel" id="phone" name="phone" placeholder="Enter phone number">
 
-           <label for="destination">Destination:</label>
+           <label for="destination">Destination*</label>
            <select id="destination" name="destination" required>
                 <option value="" disabled selected>Select a destination</option>
                 <option value="Barcelona">Barcelona</option>
@@ -269,7 +277,7 @@
                 <option value="Valencia">Valencia</option>
             </select>
 
-            <label for="travelTime">Travel Time:</label>
+            <label for="travelTime">Travel Time*</label>
             <select id="travelTime" name="travelTime" required>
                 <option value="" disabled selected>Select a travel time</option>
                 <option value="Fall">Fall</option>
