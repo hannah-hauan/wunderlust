@@ -49,6 +49,8 @@ table {
 	border-spacing: 0;
 }
 
+
+/* BYPASS BLOCKS  */
 .skip{
     background:#00bfd8;
     color: #161616;
@@ -76,4 +78,63 @@ table {
      transform: translateY(0%);
      color: #161616;
   }
+/* END BYPASS BLOCKS */
 
+/* COLOR VARIABLES */
+
+:root {
+    --fonts: Molle, cursive;
+    --fonts2: Montserrat, sans-serif;
+    --yellow: #f6d64a;
+    --teal: #55bcd5;
+    --purple: #9b26b0;
+    --blue: #499bd2;
+    --dark-gray: #222222;
+    --light-gray: #eaeaea;
+    --white: #ffffff;
+    --black: #000000;
+
+
+}
+/* END COLOR VARIABLES */
+
+h1, h2, h3 {
+    font-family: var(--fonts);
+    font-size: 2.5rem;
+    color: var(--dark-gray);
+}
+
+p {
+    font-family: var(--fonts2);
+    font-size: 1.5rem;
+}
+
+header {
+    background-image: linear-gradient(var(--teal), var(--white));
+}
+
+#plan h4{
+    font-family: var(--fonts2);
+    font-size: 2rem;
+    color: var(--dark-gray);
+    text-transform: uppercase;
+}
+
+#testimonials h4 {
+    font-family: var(--fonts2);
+    font-size: 2rem;
+    color: var(--dark-gray);
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+#testimonials q {
+    font-family: var(--fonts2);
+    font-size: 1.5rem;
+    color: var(--dark-gray);
+}
+.form-required {
+    font-family: var(--fonts2);
+    font-size: 1.5rem;
+    
+}
