@@ -250,8 +250,9 @@ article {
 }
 
 #intro p {
-  font-size: 1.2rem;
+  font-size: 1rem;
   line-height: 2.2rem;
+  font-weight: 300;
 }
 
 /* PLAN YOUR TRIP */
@@ -526,24 +527,27 @@ legend {
   border-radius: 50%; 
   cursor: pointer;
   position: relative;
+  outline: none;
 }
 
 .radio-input input[type="radio"]:checked::before {
   content: ''; 
-  display: absolute;  
-  top: 11px;
-  left: 11px;
+  position: absolute; 
+  display: block; 
+  top: 5px;
+  left: 9px;
   width: 36px;
   height: 36px;
   background: var(--purple);
   border-radius: 50%; 
 }
 
-span {
+.form-required {
   font-family: var(--fonts2);
   font-size: .9rem;
   font-style: italic;
 }
+
 
 /* FOOTER */
 footer {
