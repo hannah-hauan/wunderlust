@@ -4,11 +4,11 @@
 /* =========================
    MEDIUM SCREENS (tablets ~700px+)
    ========================= */
-   @media (min-width: 700px) {
+   @media (min-width: 600px) {
 
     /* Header “hero” look + horizontal nav */
     header{
-      max-width: 720px;
+      max-width: 650px;
       background: linear-gradient(#7ec9d6 0%, #bfe6ee 100%);
       border-radius: 0 0 .5rem .5rem;
     }
