@@ -1,0 +1,216 @@
+
+/* MEDIA QUERIES */
+
+/* =========================
+   MEDIUM SCREENS (tablets ~700px+)
+   ========================= */
+   @media (min-width: 700px) {
+
+    /* Header “hero” look + horizontal nav */
+    header{
+      max-width: 720px;
+      background: linear-gradient(#7ec9d6 0%, #bfe6ee 100%);
+      border-radius: 0 0 .5rem .5rem;
+    }
+  
+    /* hide the yellow “Menu” button and show the list inline */
+    #menu-toggle label { display: none; }
+  
+    #menu-toggle {
+      grid-column: 1 / -1;
+      grid-row: 4;                 /* put pills under logo/title/tagline */
+      margin-top: .5rem;
+    }
+  
+    #menu-toggle ul{
+      position: static;
+      transform: none;
+      display: flex;
+      gap: 1rem;
+      background: transparent;
+      width: auto;
+      overflow: visible;
+      box-shadow: none;
+    }
+  
+    #menu-toggle ul li{
+      border: 0;
+    }
+  
+    #menu-toggle ul li a{
+      background: #f7f7f7;
+      border: 1px solid rgba(0,0,0,.15);
+      border-radius: .35rem;
+      padding: .65rem 1rem;
+      text-transform: none;
+      letter-spacing: 0;
+    }
+  
+    /* optional: highlight the first pill like your comp */
+    #menu-toggle ul li:first-child a{
+      background: var(--yellow);
+      border-color: rgba(0,0,0,.2);
+    }
+  
+    /* widen page */
+    article{ max-width: 720px; }
+  
+    /* images: 2 small side-by-side, pano below */
+    #img-grid{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+    #img-grid picture{ grid-column: 1 / -1; } /* pano spans both */
+    #img-grid img,
+    #img-grid picture img{
+      width: 100%;
+      height: auto;
+      margin: 0;             /* undo mobile full-bleed */
+      max-width: 100%;
+    }
+  }
+
+
+  /* PLAN — 2×2 grid of cards */
+  #plan { 
+    margin-top: 2.5rem;
+    padding: 2rem 1.5rem 2.5rem;
+  }
+  #plan > div{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  /* TESTIMONIALS — 2 columns */
+  #testimonials{
+    padding: 3rem 1.5rem;
+  }
+  #testimonials > div{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem 1.5rem;
+    align-items: start;
+  }
+  #testimonials section img{
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: .75rem;
+  }
+
+  /* ABOUT — 2 columns of stats */
+  #about { padding: 3rem 1.5rem; }
+  #about > div{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem 2rem;
+  }
+
+
+  
+  /* =========================
+     LARGE SCREENS (desktops ~1024px+)
+     ========================= */
+  @media (min-width: 1024px) {
+  
+    /* header layout stretched across */
+    header{
+      max-width: 1100px;
+      grid-template-columns: auto 1fr auto;  /* logo | titles | pills */
+      grid-template-rows: auto auto;
+      row-gap: .25rem;
+      background: linear-gradient(#7ec9d6 0%, #bfe6ee 100%);
+    }
+  
+    #logo{ grid-column: 1; grid-row: 1 / span 2; }
+    header h1{ grid-column: 2; grid-row: 1; font-size: 3.25rem; }
+    header p { grid-column: 2; grid-row: 2; }
+  
+    /* pills sit top-right */
+    #menu-toggle{
+      grid-column: 3;
+      grid-row: 1;
+      margin-top: .25rem;
+    }
+  
+    #menu-toggle ul{
+      display: flex;
+      gap: .75rem;
+    }
+  
+    #menu-toggle ul li a{
+      padding: .6rem 1rem;
+      border-radius: .3rem;
+    }
+  
+    /* content width */
+    article{ max-width: 1100px; }
+  
+    /* text + images side-by-side */
+    #intro{
+      display: grid;
+      grid-template-columns: 1.05fr 1fr;   /* text | image area */
+      gap: 2rem;
+    }
+  
+    /* make the two small shots form a grid on the right */
+    #img-grid{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      align-self: start;
+    }
+  
+    /* pano sits below the two small shots */
+    #img-grid picture{ grid-column: 1 / -1; }
+  
+    /* ensure images don’t bleed full-width at desktop */
+    #img-grid img,
+    #img-grid picture img{
+      width: 100%;
+      height: auto;
+      margin: 0;
+      max-width: 100%;
+    }
+  
+      /* PLAN — 4 in a row */
+  #plan{
+    margin: 0;
+    padding: 2.5rem 3rem 3rem;
+  }
+  #plan > div{
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+  #plan > div > section{
+    aspect-ratio: auto;
+    padding: 1rem;
+  }
+
+  /* TESTIMONIALS — row of 4, tighter avatars */
+  #testimonials{
+    padding: 3.5rem 3rem;
+  }
+  #testimonials > div{
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+  #testimonials section img{
+    width: 140px;
+    height: 140px;
+  }
+
+  /* ABOUT — 4 across */
+  #about{
+    padding: 3.5rem 3rem;
+  }
+  #about > div{
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2.5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+}
+  
