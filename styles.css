@@ -650,19 +650,27 @@ fieldset label {
 footer {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   background: var(--light-gray);
   color: var(--black);
   padding: 2rem;
-  text-align: center;
   margin: 0;
   font-family: var(--fonts2);
   font-size: .9rem;
   gap: 1rem;
 }
 
-footer p { margin: .5rem 0; font-size: .9rem; }
+footer p { 
+  margin: .5rem 0;
+  font-size: .9rem;
+}
 
-footer a { text-decoration: none; color: var(--black); }
+footer a { 
+  text-decoration: none; 
+  color: var(--black); 
+}
 
 
 /* MEDIUM >550PX */
@@ -1173,11 +1181,4 @@ align-items: start;
 .custom-select {
     width: 100%;
     }
-}
-
-footer {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    padding: 1.5rem 8rem;
 }
