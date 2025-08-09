@@ -44,6 +44,7 @@ table { border-collapse: collapse; border-spacing: 0; }
   --turq: #55bcd5;
   --purple: #9b26b0;
   --blue: #499bd2;
+  --light-blue: #96d0ff;
   --dark-gray: #222;
   --light-gray: #eaeaea;
   --white: #fff;
@@ -154,7 +155,9 @@ header {
   padding-top: 3.25rem;
 }
 
-#menu-toggle ul li { border-top: 1px solid var(--black); }
+#menu-toggle ul li { 
+  border-top: 1px solid var(--black); 
+}
 
 #menu-toggle ul li a {
   display: flex;
@@ -174,8 +177,8 @@ header {
 
 #menu-toggle ul li a:hover,
 #menu-toggle ul li a:focus {
-  background: var(--blue);
-  color: var(--white);
+  background: var(--light-blue) ;
+
 }
 
 
@@ -479,7 +482,6 @@ q {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%239b26b0' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 12l6 6 10-12'/%3E%3C/svg%3E");
 }
 
-/* unified submit buttons */
 #mySubmit, #submitButton {
   width: 90%;
   height: 80px;
@@ -547,7 +549,6 @@ form select {
   box-sizing: border-box;
 }
 
-/* placeholders in black */
 form input::placeholder { color: var(--black); }
 
 form input:focus,
@@ -567,7 +568,6 @@ form select {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%239b26b0' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 12 10 16 18 8'/%3E%3C/svg%3E");
 }
 
-/* --- CONTACT radios (matches your HTML structure) --- */
 #contact fieldset {
   border: 0;
   margin: 1rem 0;
@@ -593,7 +593,6 @@ form select {
   color: var(--light-gray);
 }
 
-/* visual container for the custom radio */
 #contact .radio-input {
   position: relative;
   width: 44px;
@@ -601,7 +600,6 @@ form select {
   display: inline-block;
 }
 
-/* the real input sits on top but is invisible */
 #contact .radio-input input[type="radio"] {
   position: absolute;
   inset: 0;
@@ -612,7 +610,6 @@ form select {
   cursor: pointer;
 }
 
-/* outer ring */
 #contact .radio-input .radio-control {
   position: absolute;
   inset: 0;
@@ -622,7 +619,6 @@ form select {
   pointer-events: none;
 }
 
-/* inner dot when checked */
 #contact .radio-input input[type="radio"]:checked + .radio-control::after {
   content: "";
   position: absolute;
