@@ -49,6 +49,8 @@ table { border-collapse: collapse; border-spacing: 0; }
   --light-gray: #eaeaea;
   --white: #fff;
   --black: #000;
+  --radio-size: 56px;
+  --radio-border: 4px;
 }
 
 
@@ -557,14 +559,16 @@ form input::placeholder {
 
 .radio-input {
   position: relative;
-  width: 44px;
-  height: 44px;
+  width: var(--radio-size);
+  height: var(--radio-size);
+  flex: 0 0 var(--radio-size);
   display: inline-block;
 }
 
 .radio-input input[type="radio"] {
   position: absolute;
   inset: 0;
+  margin: 0;
   width: 100%;
   height: 100%;
   opacity: 0;
@@ -575,19 +579,19 @@ form input::placeholder {
 .radio-input .radio-control {
   position: absolute;
   inset: 0;
-  border: 3px solid var(--purple);
-  border-radius: 100%;
+  box-sizing: border-box;
+  border: var(--radio-border) solid var(--purple);
+  border-radius: 50%;
   background: var(--white);
-  pointer-events: none;
-  color: var
 }
+
 .radio-input input[type="radio"]:checked + .radio-control::after {
   content: "";
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 24px;
-  height: 24px;
+  width:  calc(var(--radio-size) - (var(--radio-border) * 2) - 20px);
+  height: calc(var(--radio-size) - (var(--radio-border) * 2) - 20px);
   transform: translate(-50%, -50%);
   border-radius: 50%;
   background: var(--purple);
@@ -606,6 +610,13 @@ fieldset {
     margin-top: 1.5rem;
     width: 90%;
 }
+
+fieldset label {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 0 0 1rem;
+  }
 
 /* FOOTER */
 footer {
@@ -881,6 +892,8 @@ footer a { text-decoration: none; color: var(--black); }
   fieldset label {
     display: flex;
     align-items: center;
+    gap: 1rem;
+    margin: 0 0 1rem;
   }
 }
 
